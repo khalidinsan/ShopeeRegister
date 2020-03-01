@@ -27,7 +27,7 @@ if(isset($_GET['ignore'])){
 	preg_match_all('/^set-cookie:\s*([^;]*)/mi', $result[2], $cookie);
 	$cookies = "";
 
-	$crsf = explode('=', $cookie[1][7]);
+	$crsf = explode('=', $cookie[1][9]);
 	$crsf = $crsf[1];
 
 	foreach($cookie[1] as $item) {
